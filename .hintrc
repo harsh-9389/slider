@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "detect-css-reflows/layout": "off",
+    "no-inline-styles": "off",
+    "css-prefix-order": "off"
+  }
+}
