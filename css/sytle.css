@@ -20,6 +20,7 @@
 .right img{
     width: 70%;
     margin-left: 7rem;
+    margin-bottom: 20px;
 }
 
 header{
@@ -32,7 +33,7 @@ header nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .links a{
@@ -68,7 +69,7 @@ header nav{
 }
 
 .slider{
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .slider .slide{
@@ -141,6 +142,100 @@ header nav{
     padding-right: 4rem;
 }
 
-/* .left{
-    padding-right: 10%;
+.slider_btns{
+    position: fixed; 
+    bottom: 0;
+    right: 0;
+    background:  #7D00FF;
+}
+
+.slider_btns button{
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 0.5rem 1rem; 
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+/* 
+.slider_btns button:first-child span{
+    margin-right: 1rem; 
+}
+
+.slider_btns button:last-child span{
+    margin-left: 1rem; 
 } */
+
+@keyframes slideInDown {
+    from{
+        transform: translate3d(0, -100%, 0);
+        -webkit-transform: translate3d(0, -100%, 0);
+        -moz-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        -o-transform: translate3d(0, -100%, 0);
+    }
+
+    to{
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInUp {
+    from{
+        transform: translate3d(0, 100%, 0);
+        -webkit-transform: translate3d(0, 100%, 0);
+        -moz-transform: translate3d(0, 100%, 0);
+        -ms-transform: translate3d(0, 100%, 0);
+        -o-transform: translate3d(0, 100%, 0);
+        visibility: visible;
+        opacity: 0;
+    }
+
+    to{
+        transform: translate3d(0, 0, 0);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.slick-slider .slick-active .left h1{
+    animation: slideInDown 3s; 
+    -webkit-animation: slideInDown 3s;
+}
+
+.slick-active .right{
+    animation: slideInUp 1s forwards;
+    -webkit-animation: slideInUp 1s forwards;
+}
+
+.slick-active .form{
+    animation: slideInUp 2s forwards;
+    -webkit-animation: slideInUp 2s forwards;
+}
+
+.slick-active h5{
+    animation: slideInUp 4s forwards;
+    -webkit-animation: slideInUp 4s forwards;
+}
+
+.slick-active p{
+    animation: fadeIn 4s forwards; 
+    -webkit-animation: fadeIn 4s forwards;
+}
